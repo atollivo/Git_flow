@@ -11,17 +11,26 @@
 
 <body>
 
-  <div class="login-box">
+<main class="login-box">
     <h2>Iniciar Sesión</h2>
-
-    <input type="text" id="usuario" placeholder="Usuario">
-    <input type="password" id="password" placeholder="Contraseña">
-
-    <button onclick="login()">Ingresar</button>
-
+    <form id="loginForm">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" placeholder="Ej: Juanito" required>
+        
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+        
+        <button type="submit">Ingresar</button>
+    </form>
+    <!-- Se agregó <form> para permitir el envío con la tecla Enter -->
     <p id="mensaje"></p>
-  </div>
-
+</main>
+<!--CAMBIOS REALIZADOS: 
+  - Se cambió la estructura a etiquetas semánticas (main y form).
+  - Se añadieron labels para mejorar la accesibilidad.-->
+  
+  <!--modificado por: DUVAN JEREZ-->
+  
   <!-- Conexión al JS -->
   <script src="script.js"></script>
 

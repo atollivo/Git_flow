@@ -1,51 +1,89 @@
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
 .login-box {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px; /* Bordes redondeados */
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    text-align: center;
 }
 
 h2 {
-  margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
 }
+
 
 input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s; /* Animación al hacer clic */
 }
 
+input:focus {
+    border-color: #4facfe; /* Resalta el input cuando escribes */
+    box-shadow: 0 0 5px rgba(79, 172, 254, 0.3);
+}
+
+/* 4. Botón con efecto de interacción */
 button {
-  width: 95%;
-  padding: 10px;
-  background: #4facfe;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición para color y tamaño */
 }
 
 button:hover {
-  background: #007bff;
+    background: #007bff;
+    transform: translateY(-2px); /* El botón "salta" un poquito */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+button:active {
+    transform: translateY(0); /* Vuelve a su sitio al hacer clic */
+}
+
+
+#mensaje {
+    margin-top: 15px;
+    font-size: 14px;
+    min-height: 20px; /* Evita que la caja salte cuando aparece el texto */
 }
 
 .error {
-  color: red;
+    color: #e74c3c;
+    font-weight: bold;
 }
 
 .success {
-  color: green;
+    color: #27ae60;
+    font-weight: bold;
 }
